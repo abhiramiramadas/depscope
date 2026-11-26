@@ -1,6 +1,6 @@
 {
   "name": "depscope",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A local dependency health scanner for Node.js projects",
   "type": "module",
   "bin": {
@@ -9,6 +9,21 @@
   "engines": {
     "node": ">=18"
   },
-  "keywords": ["dependencies", "npm", "security", "developer-tools", "audit"],
-  "license": "MIT"
+  "keywords": [
+    "dependencies",
+    "npm",
+    "security",
+    "developer-tools",
+    "audit"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "start": "node ./bin/depscope.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ]
 }

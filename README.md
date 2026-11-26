@@ -23,6 +23,14 @@ Or run without linking:
 node ./bin/depscope.js /path/to/your/node-project
 ```
 
+Use in CI / scripts:
+
+```
+node ./bin/depscope.js . --json > deps.json          # machine-readable output
+node ./bin/depscope.js . --fail-on high              # exit 1 on high+ vulnerabilities
+node ./bin/depscope.js . --output reports/deps.html  # custom report path
+```
+
 Skip network-dependent checks:
 
 ```bash
@@ -35,7 +43,7 @@ The report is written to `depscope-report.html` inside the target project.
 
 - Reads `dependencies`, `devDependencies` and `optionalDependencies` from `package.json`.
 - Runs `npm audit --json` and `npm outdated --json`.
-- Performs a lightweight source scan to flag dependencies with no obvious import/reference.
+- Scans source files (imports, `require`, dynamic `import()`), config files and npm scripts to flag dependencies with no obvious reference. `package.json` and lockfiles are ignored so they can't count as usage.
 - Generates a self-contained HTML report.
 
 ## Important limitations
@@ -48,8 +56,8 @@ The npm checks may fail when offline, behind a restrictive proxy, or when the ta
 
 - Optional Knip integration for stronger unused-export/dependency analysis.
 - Python project support.
-- JSON and Markdown report formats.
-- GitHub Actions integration.
+- Markdown report format.
+- Ready-made GitHub Action.
 - Interactive dependency review and safe fix suggestions.
 
 ## License
