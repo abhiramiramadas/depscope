@@ -11,7 +11,7 @@ A local dependency health scanner for Node.js projects. It creates an HTML repor
 ## Run locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/depscope.git
+git clone https://github.com/abhiramiramadas/depscope.git
 cd depscope
 npm link
 depscope /path/to/your/node-project
