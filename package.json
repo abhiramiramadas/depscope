@@ -1,0 +1,34 @@
+
+{
+  "name": "depscope",
+  "version": "0.2.0",
+  "description": "Dependency cleanup plan for Node.js projects: what to remove (with proof), what is vulnerable, what is outdated, plus copy-paste fixes.",
+  "type": "module",
+  "bin": {
+    "depscope": "./bin/depscope.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dependencies",
+    "unused",
+    "audit",
+    "outdated",
+    "security",
+    "npm",
+    "cli",
+    "depcheck",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/run.js",
+    "start": "node ./bin/depscope.js"
+  }
+}
